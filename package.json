@@ -1,0 +1,8 @@
+{
+  "name": "@kilbergr/byte-forge",
+  "author": {
+    "name": "Ales Albert Kilbergr",
+    "email": "ales.albert@kilbergr.eu"
+  },
+  "description": "The `ByteForge` is a playground for trying concepts and proving ideas."
+}
