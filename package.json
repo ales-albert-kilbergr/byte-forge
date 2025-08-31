@@ -4,5 +4,9 @@
     "name": "Ales Albert Kilbergr",
     "email": "ales.albert@kilbergr.eu"
   },
-  "description": "The `ByteForge` is a playground for trying concepts and proving ideas."
+  "description": "The `ByteForge` is a playground for trying concepts and proving ideas.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "engineStrict": true
 }
