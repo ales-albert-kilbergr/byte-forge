@@ -19,6 +19,14 @@
       "cache": true,
       "inputs": ["default", "^production"]
     },
+    "format": {
+      "cache": true,
+      "inputs": ["default"]
+    },
+    "format:check": {
+      "cache": true,
+      "inputs": ["default"]
+    },
     "@nx/esbuild:esbuild": {
       "cache": true,
       "dependsOn": ["^build"],
