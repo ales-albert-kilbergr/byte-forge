@@ -57,3 +57,13 @@ pnpm --version
 ```sh
 pnpm install
 ```
+
+## Workspace
+
+- **packages** folder contains various standalone packages. Those are supposed to
+    be independent and reusable. The boundary between them and applications is
+    meant to be strong. Packages needs to be built and published at least once 
+    into local `node_modules` before being used. This way the packages looks like
+    real dependencies to the `apps` and not just like a libraries which are built
+    together with the apps code. As a consequence, the changes in the packages
+    does not trigger application rebuilds.
