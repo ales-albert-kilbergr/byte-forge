@@ -51,13 +51,11 @@ export type Success<Value = unknown> = {
 
 export type Result<S = unknown, F = unknown> = Success<S> | Failure<F>;
 
-export type InferSuccess<R extends Result> = R extends Success<infer S>
-  ? S
-  : never;
+export type InferSuccess<R extends Result> =
+  R extends Success<infer S> ? S : never;
 
-export type InferFailure<R extends Result> = R extends Failure<infer F>
-  ? F
-  : never;
+export type InferFailure<R extends Result> =
+  R extends Failure<infer F> ? F : never;
 
 export type AddFailureType<R extends Result, F> = Result<
   InferSuccess<R>,
