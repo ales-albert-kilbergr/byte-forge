@@ -338,10 +338,10 @@ function match(
     return matcher.onSuccess
       ? success(matcher.onSuccess(unwrap(result)))
       : result;
-  } 
+  }
   return matcher.onFailure
-      ? failure(matcher.onFailure(unwrapFailure(result)))
-      : result;
+    ? failure(matcher.onFailure(unwrapFailure(result)))
+    : result;
 }
 // #endregion Result matchers
 
@@ -453,5 +453,5 @@ export const Result: ResultStatic = {
   assertSuccess,
   assertFailure,
 
-  match
+  match,
 };

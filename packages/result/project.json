@@ -22,6 +22,20 @@
         "command": "rm -rf node_modules/@kilbergr/result && cp -r dist/packages/result node_modules/@kilbergr/result"
       },
       "dependsOn": ["build"]
+    },
+    "format": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/result",
+        "command": "prettier --write src/**/*.ts"
+      }
+    },
+    "format:check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/result",
+        "command": "prettier --check src/**/*.ts"
+      }
     }
   }
 }
