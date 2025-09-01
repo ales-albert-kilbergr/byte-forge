@@ -38,7 +38,7 @@
     "noEmit": false,
     "incremental": true,
     "removeComments": true,
-    "preserveConstEnums": false,
+    "preserveConstEnums": true,
     "declarationMap": true,
     "inlineSources": false,
     "noEmitHelpers": false,
