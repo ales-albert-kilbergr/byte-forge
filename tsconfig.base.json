@@ -13,8 +13,6 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    
-    // Strict Type Checking Options
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -27,22 +25,16 @@
     "noUncheckedIndexedAccess": true,
     "noFallthroughCasesInSwitch": true,
     "exactOptionalPropertyTypes": true,
-    
-    // Additional Checks
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    
-    // Module Resolution
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
-    
-    // Emit
     "noEmit": false,
     "incremental": true,
     "removeComments": true,
@@ -51,14 +43,12 @@
     "inlineSources": false,
     "noEmitHelpers": false,
     "noEmitOnError": true,
-    
-    // Interop Constraints
     "allowJs": false,
     "checkJs": false,
-    
-    // Base URL and Path Mapping
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@kilbergr/result": ["packages/result/src/index.ts"]
+    }
   },
   "exclude": [
     "node_modules",

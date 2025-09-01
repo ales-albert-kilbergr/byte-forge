@@ -1,0 +1,21 @@
+{
+  "name": "result",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/result/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/result",
+        "main": "packages/result/src/index.ts",
+        "tsConfig": "packages/result/tsconfig.lib.json",
+        "assets": ["packages/result/*.md"],
+        "format": ["cjs"],
+        "generatePackageJson": true
+      }
+    }
+  }
+}
