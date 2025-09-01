@@ -13,9 +13,15 @@
         "main": "packages/result/src/index.ts",
         "tsConfig": "packages/result/tsconfig.lib.json",
         "assets": ["packages/result/*.md"],
-        "format": ["cjs"],
-        "generatePackageJson": true
+        "format": ["esm", "cjs"]
       }
+    },
+    "publish:locale": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rm -rf node_modules/@kilbergr/result && cp -r dist/packages/result node_modules/@kilbergr/result"
+      },
+      "dependsOn": ["build"]
     }
   }
 }

@@ -1,9 +1,28 @@
 {
   "name": "@kilbergr/result",
   "version": "0.0.1",
-  "private": true,
-  "type": "commonjs",
+    "description": "Type-safe Result monad for error handling",
+  "type": "module",
   "main": "./index.cjs",
+  "module": "./index.js",
   "types": "./index.d.ts",
-  "dependencies": {}
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
+    }
+  },
+  "dependencies": {},
+  "author": {
+    "name": "Ales Albert Kilbergr",
+    "email": "ales.albert@kilbergr.eu"
+  },
+  "license": "MIT",
+  "keywords": ["result", "monad", "error-handling", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kilbergr/byte-forge.git",
+    "directory": "packages/result"
+  }
 }
