@@ -8,5 +8,9 @@
   "engines": {
     "node": ">=24.0.0"
   },
-  "engineStrict": true
+  "engineStrict": true,
+  "devDependencies": {
+    "@nx/workspace": "^21.4.1",
+    "nx": "^21.4.1"
+  }
 }
