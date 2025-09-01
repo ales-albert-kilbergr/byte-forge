@@ -1,0 +1,20 @@
+{
+  "name": "pg-sql-tag",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/pg-sql-tag/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/pg-sql-tag",
+        "tsConfig": "packages/pg-sql-tag/tsconfig.lib.json",
+        "packageJson": "packages/pg-sql-tag/package.json",
+        "main": "packages/pg-sql-tag/src/index.ts",
+        "assets": ["packages/pg-sql-tag/*.md"]
+      }
+    }
+  }
+}

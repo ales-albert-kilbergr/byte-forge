@@ -47,6 +47,7 @@
     "checkJs": false,
     "baseUrl": ".",
     "paths": {
+      "@kilbergr/pg-sql-tag": ["packages/pg-sql-tag/src/index.ts"],
       "@kilbergr/result": ["packages/result/src/index.ts"]
     }
   },
