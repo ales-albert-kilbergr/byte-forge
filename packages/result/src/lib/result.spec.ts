@@ -128,7 +128,7 @@ describe('(Unit) Result', () => {
       // Act
       const act = () => Result.unsafeUnwrap(failure);
       // Assert
-      expect(act).toThrowError('Cannot unwrap a failure result');
+      expect(act).toThrow('Cannot unwrap a failure result');
     });
   });
 
@@ -171,7 +171,7 @@ describe('(Unit) Result', () => {
       // Act
       const act = () => Result.unsafeUnwrapFailure(success);
       // Assert
-      expect(act).toThrowError('Cannot unwrap a success result');
+      expect(act).toThrow('Cannot unwrap a success result');
     });
   });
 
