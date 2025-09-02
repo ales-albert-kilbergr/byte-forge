@@ -13,7 +13,6 @@
       "require": "./index.cjs"
     }
   },
-  "dependencies": {},
   "author": {
     "name": "Ales Albert Kilbergr",
     "email": "ales.albert@kilbergr.eu"
