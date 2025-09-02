@@ -1,5 +1,4 @@
-import { expectTypeOf } from 'expect-type';
-
+import { describe, it, expect, expectTypeOf, vi } from 'vitest';
 import { Failure, Result, Success } from './result';
 
 describe('(Unit) Result', () => {
@@ -318,7 +317,7 @@ describe('(Unit) Result', () => {
     it('should not call the onSuccess match handler for a failure', () => {
       // Arrange
       const failure = Result.failure('error');
-      const onSuccess = jest.fn();
+      const onSuccess = vi.fn();
       // Act
       const matched = Result.match(failure, {
         onSuccess,
@@ -331,7 +330,7 @@ describe('(Unit) Result', () => {
     it('should not call the onFailure match handler for a success', () => {
       // Arrange
       const success = Result.success(123);
-      const onFailure = jest.fn();
+      const onFailure = vi.fn();
       // Act
       const matched = Result.match(success, {
         onFailure,

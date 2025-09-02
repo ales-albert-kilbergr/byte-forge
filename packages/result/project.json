@@ -16,12 +16,20 @@
         "format": ["esm", "cjs"]
       }
     },
-    "publish:locale": {
+    "publish:local": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "rm -rf node_modules/@kilbergr/result && cp -r dist/packages/result node_modules/@kilbergr/result"
+        "command": "cp -r dist/packages/result node_modules/@kilbergr/result"
       },
       "dependsOn": ["build"]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/result"
+      }
     },
     "format": {
       "executor": "nx:run-commands",
