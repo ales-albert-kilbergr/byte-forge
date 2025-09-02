@@ -11,7 +11,7 @@
       "options": {
         "outputPath": "dist/packages/result",
         "main": "packages/result/src/index.ts",
-        "tsConfig": "packages/result/tsconfig.lib.json",
+        "tsConfig": "packages/result/tsconfig.json",
         "assets": ["packages/result/*.md"],
         "format": ["esm", "cjs"]
       }
