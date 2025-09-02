@@ -8,9 +8,9 @@
   "types": "./src/index.d.ts",
   "exports": {
     ".": {
+      "types": "./src/index.d.ts",
       "import": "./index.js",
-      "require": "./index.cjs",
-      "types": "./src/index.d.ts"
+      "require": "./index.cjs"
     }
   },
   "dependencies": {},
