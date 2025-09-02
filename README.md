@@ -58,7 +58,7 @@ pnpm --version
 pnpm install
 ```
 
-## Workspace
+## Workspace Structure
 
 - **packages** folder contains various standalone packages. Those are supposed to
     be independent and reusable. The boundary between them and applications is
@@ -67,3 +67,21 @@ pnpm install
     real dependencies to the `apps` and not just like a libraries which are built
     together with the apps code. As a consequence, the changes in the packages
     does not trigger application rebuilds.
+
+## Dependency Management
+
+### Shared npm dependencies
+
+**What are shared npm dependencies?**
+Shared dependencies are npm libraries of third parties that are required by all
+packages in this workspace. That said, shared npm dependencies MUST be installed
+in the root `node_modules` and tracked in the root `package.json` file. 
+
+**Why shared npm dependencies MUST only be devDependencies?**
+Shared npm dependencies are common for all packages, thus they can only be needed
+during the package development, but not required for the package in runtime.
+
+**Can you give me an example?**
+Yes. Shared npm dependencies are `typescript`, `@nx/vite` or `esbuild`. Those
+are packages needed to orchestrate the workspace and execute tasks on the 
+codebase during the development.
