@@ -31,6 +31,12 @@
         "reportsDirectory": "../../coverage/packages/result"
       }
     },
+    "test:coverage": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx nx run result:test --coverage"
+      }
+    },
     "format": {
       "executor": "nx:run-commands",
       "options": {
