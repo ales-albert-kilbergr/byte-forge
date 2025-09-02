@@ -1,0 +1,27 @@
+{
+  "name": "@kilbergr/pg-query-config-helpers",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "pg": "^8.16.3",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.5",
+    "pg": "^8.16.3",
+    "tslib": "^2.8.1"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

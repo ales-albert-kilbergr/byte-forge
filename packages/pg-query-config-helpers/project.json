@@ -1,0 +1,20 @@
+{
+  "name": "query-config-helpers",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/pg-query-config-helpers/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/pg-query-config-helpers",
+        "tsConfig": "packages/pg-query-config-helpers/tsconfig.lib.json",
+        "packageJson": "packages/pg-query-config-helpers/package.json",
+        "main": "packages/pg-query-config-helpers/src/index.ts",
+        "assets": ["packages/pg-query-config-helpers/*.md"]
+      }
+    }
+  }
+}

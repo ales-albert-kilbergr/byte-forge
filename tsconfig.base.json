@@ -39,7 +39,6 @@
     "incremental": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "declarationMap": true,
     "inlineSources": false,
     "noEmitHelpers": false,
     "noEmitOnError": true,
@@ -47,6 +46,9 @@
     "checkJs": false,
     "baseUrl": ".",
     "paths": {
+      "@kilbergr/pg-query-config-helpers": [
+        "packages/pg-query-config-helpers/src/index.ts"
+      ],
       "@kilbergr/pg-sql-tag": ["packages/pg-sql-tag/src/index.ts"],
       "@kilbergr/result": ["packages/result/src/index.ts"]
     }
