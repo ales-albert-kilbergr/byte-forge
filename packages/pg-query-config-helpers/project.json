@@ -1,5 +1,5 @@
 {
-  "name": "query-config-helpers",
+  "name": "pg-query-config-helpers",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/pg-query-config-helpers/src",
   "projectType": "library",
@@ -14,6 +14,41 @@
         "packageJson": "packages/pg-query-config-helpers/package.json",
         "main": "packages/pg-query-config-helpers/src/index.ts",
         "assets": ["packages/pg-query-config-helpers/*.md"]
+      }
+    },
+    "publish:local": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cp -r dist/packages/pg-query-config-helpers node_modules/@kilbergr/pg-query-config-helpers"
+      },
+      "dependsOn": ["build"]
+    },
+     "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/pg-query-config-helpers"
+      }
+    },
+    "test:coverage": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx nx run pg-query-config-helpers:test --coverage"
+      }
+    },
+    "format": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/pg-query-config-helpers",
+        "command": "prettier --write src/**/*.ts"
+      }
+    },
+    "format:check": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "packages/pg-query-config-helpers",
+        "command": "prettier --check src/**/*.ts"
       }
     }
   }
