@@ -85,3 +85,9 @@ during the package development, but not required for the package in runtime.
 Yes. Shared npm dependencies are `typescript`, `@nx/vite` or `esbuild`. Those
 are packages needed to orchestrate the workspace and execute tasks on the 
 codebase during the development.
+
+### Peer and Dev dependencies
+
+**Why packages often list production dependencies as peer and dev dependencies?**
+Packages often list production dependencies as peer and dev dependencies to ensure that the consuming application is responsible for providing those dependencies. This approach helps to avoid version conflicts and ensures that the application uses a single version of a dependency, rather than having multiple versions installed in different packages.
+At the same time, listing them as dev dependencies allows the package to be developed and tested in isolation, ensuring that all necessary dependencies are available during development.
